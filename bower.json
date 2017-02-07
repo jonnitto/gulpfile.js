@@ -1,0 +1,15 @@
+{
+  "name": "gulp",
+  "description": "Dependencies",
+  "authors": [
+    "Jon Uhlmann <me@jonnitto.ch>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

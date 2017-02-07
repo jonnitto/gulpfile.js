@@ -1,0 +1,6 @@
+{
+    "about": "With this file you can override settings from gulpfile.js",
+    "root": {
+        "notifications": true
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "info": {
+        "description": "Website",
+        "system": "Neos",
+        "author": "gesagt-getan.at",
+        "homepage": "https://www.example.com"
+    },
+
+    "root": {
+        "base": "./Packages/",
+        "src": "Sites/GesagtGetan.Theme/Resources/Private",
+        "dest": "Sites/GesagtGetan.Theme/Resources/Public",
+        "watch": ["Plugins/**/Private/**", "Sites/**/Private/**"],
+        "dontWatch": ["**/WebRoot/**", "Plugins/Jonnitto.Plyr/**", "Plugins/Jonnitto.PhotoSwipe/**"],
+        "inlineAssets": false,
+        "optimizeImages": false,
+        "notifications": false
+    },
+
+    "banner": "/*!\n * <%= info.description %> - powered by <%= info.system %> & <%= info.author %>\n * @build <%= timestamp %>\n * @link <%= info.homepage %>\n */\n",
+
+    "chmod": {
+        "owner": {
+            "read": true,
+            "write": true,
+            "execute": false
+        },
+        "group": {
+            "read": true,
+            "write": false,
+            "execute": false
+        },
+        "others": {
+            "read": true,
+            "write": false,
+            "execute": false
+        }
+    },
+
+    "tasks": {
+        "clean": ["Assets", "Styles", "Scripts", "*.css", "*.js"],
+        "css": {
+            "src": "Components",
+            "extensions": ["sass", "scss", "css"],
+            "dest": "Styles",
+            "sass": {
+                "imagePath": "Assets",
+                "precision": 10,
+                "sourceComments": true,
+                "includePaths": [
+                    "./Packages/Plugins/",
+                    "./bower_components/",
+                    "./node_modules/"
+                ]
+            },
+            "postcss": {
+                "activateRtlCss": false,
+                "assets": {
+                    "loadPaths": ["Assets"],
+                    "cachebuster": false
+                },
+                "rucksack": {
+                    "fallbacks": false
+                },
+                "mqpacker": {
+                    "sort": true
+                },
+                "pxtorem": {
+                    "rootValue": 16,
+                    "unitPrecision": 5,
+                    "propList": ["font", "font-size", "line-height", "letter-spacing"],
+                    "selectorBlackList": [],
+                    "replace": true,
+                    "mediaQuery": false,
+                    "minPixelValue": 0
+                },
+                "cssnano": {
+                    "autoprefixer": {
+                        "add": true
+                    },
+                    "reduceIdents": false,
+                    "zindex": false,
+                    "discardComments": {
+                        "removeAll": true
+                    }
+                },
+                "fixes": {
+                    "preset": "safe"
+                }
+            },
+            "cssbeautifyOptions": {
+                "indent": "\t",
+                "autosemicolon": true
+            }
+        },
+        "scss": true,
+        "scssLint": false,
+        "jsLint": true,
+        "js": {
+            "src": "Components",
+            "dest": "Scripts",
+            "extensions": ["js", "jsx"],
+            "rollup": {
+                "enable": true,
+                "comment": "Available formats are amd, cjs, es6, iife or umd",
+                "format": "iife",
+                "buble": true,
+                "plugins": {
+                    "bowerResolve": {},
+                    "nodeResolve": {
+                        "module": true,
+                        "jsnext": true,
+                        "main": true,
+                        "browser": true
+                    },
+                    "includePaths": {
+                        "include": {},
+                        "paths": [
+                            "",
+                            "Packages/Plugins"
+                        ],
+                        "external": [],
+                        "extensions": [".js", ".json", ".jsx"]
+                    },
+                    "commonjs": {
+                        "exclude": "node_modules/process-es6/**",
+                        "include": [ "node_modules/**" ]
+                    },
+                    "amd": false
+                }
+            }
+        },
+        "images": {
+            "src": "Images",
+            "dest": "Assets",
+            "watchOnlySrc": true,
+            "extensions": ["jpg", "jpeg", "png", "svg", "gif", "ico"]
+        },
+        "fonts": {
+            "src": "Fonts",
+            "dest": "Assets",
+            "watchOnlySrc": true,
+            "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+        },
+        "static": {
+            "src": "Static",
+            "dest": "Assets",
+            "watchOnlySrc": true,
+            "extensions": ["*"]
+        },
+        "svgSprite": {
+            "src": "Sprite",
+            "dest": "Assets",
+            "watchOnlySrc": true,
+            "extensions": ["svg"]
+        }
+    }
+
+}
