@@ -59,6 +59,10 @@
                     "loadPaths": ["Assets"],
                     "cachebuster": false
                 },
+                "gridKiss": {
+                    "fallback": true,
+                    "optimize": true
+                },
                 "rucksack": {
                     "fallbacks": false
                 },

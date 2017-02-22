@@ -81,22 +81,23 @@ Following plugins are included:
 
 Plugin                                                                                  | Description
 --------------------------------------------------------------------------------------- | ----------------------
-**[postcss-rtl](https://www.npmjs.com/package/postcss-rtl)**                            | PostCSS plugin for RTL-optimizations. Turned off by default
-**[postcss-vmax](https://www.npmjs.com/package/postcss-vmax)**                          | Use vmax units in Edge and Internet Explorer
-**[postcss-short](https://www.npmjs.com/package/postcss-short)**                        | Short creates and extends shorthand properties in CSS
-**[postcss-center](https://www.npmjs.com/package/postcss-center)**                      | PostCSS plugin to center elements
-**[rucksack-css](https://simplaio.github.io/rucksack/)**                                | A little bag of CSS superpowers
-**[postcss-flexbox](https://www.npmjs.com/package/postcss-flexbox)**                    | Flexbox layouts made easy with PostCSS
-**[postcss-assets](https://www.npmjs.com/package/postcss-assets)**                      | PostCSS plugin to manage assets
+**[css-mqpacker](https://www.npmjs.com/package/css-mqpacker)**                          | Pack same CSS media query rules into one media query rule.
+**[cssnano](http://cssnano.co)**                                                        | Minify & autoprefix final css files
 **[pleeease-filters](https://www.npmjs.com/package/pleeease-filters)**                  | Convert CSS shorthand filters to SVG ones
-**[postcss-selector-matches](https://www.npmjs.com/package/postcss-selector-matches)**  | PostCSS plugin to transform :matches() W3C CSS pseudo class to more compatible CSS selectors
-**[postcss-selector-not](https://www.npmjs.com/package/postcss-selector-not)**          | PostCSS plugin to transform :not() W3C CSS leve 4 pseudo class to :not() CSS level 3 selectors
+**[postcss-assets](https://www.npmjs.com/package/postcss-assets)**                      | PostCSS plugin to manage assets
+**[postcss-center](https://www.npmjs.com/package/postcss-center)**                      | PostCSS plugin to center elements
+**[postcss-fixes](https://www.npmjs.com/package/postcss-fixes)**                        | PostCSS plugin to fix known Browser Bugs.
+**[postcss-flexbox](https://www.npmjs.com/package/postcss-flexbox)**                    | Flexbox layouts made easy with PostCSS
+**[postcss-grid-kiss](https://www.npmjs.com/package/postcss-grid-kiss)**                | A PostCSS plugin to keep CSS grids stupidly simple
 **[postcss-pseudoelements](https://www.npmjs.com/package/postcss-pseudoelements)**      | PostCSS plugin to add single-colon CSS 2.1 syntax pseudo selectors (i.e. :before)
 **[postcss-quantity-queries](https://www.npmjs.com/package/postcss-quantity-queries)**  | PostCSS plugin enabling quantity-queries
-**[postcss-fixes](https://www.npmjs.com/package/postcss-fixes)**                        | PostCSS plugin to fix known Browser Bugs.
-**[css-mqpacker](https://www.npmjs.com/package/css-mqpacker)**                          | Pack same CSS media query rules into one media query rule.
 **[postcss-reporter](https://www.npmjs.com/package/postcss-reporter)**                  | Log PostCSS messages in the console
-**[cssnano](http://cssnano.co)**                                                        | Minify & autoprefix final css files
+**[postcss-rtl](https://www.npmjs.com/package/postcss-rtl)**                            | PostCSS plugin for RTL-optimizations. Turned off by default
+**[postcss-selector-matches](https://www.npmjs.com/package/postcss-selector-matches)**  | PostCSS plugin to transform :matches() W3C CSS pseudo class to more compatible CSS selectors
+**[postcss-selector-not](https://www.npmjs.com/package/postcss-selector-not)**          | PostCSS plugin to transform :not() W3C CSS leve 4 pseudo class to :not() CSS level 3 selectors
+**[postcss-short](https://www.npmjs.com/package/postcss-short)**                        | Short creates and extends shorthand properties in CSS
+**[postcss-vmax](https://www.npmjs.com/package/postcss-vmax)**                          | Use vmax units in Edge and Internet Explorer
+**[rucksack-css](https://simplaio.github.io/rucksack/)**                                | A little bag of CSS superpowers
 
 ## Plugins for Editors
 

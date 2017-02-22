@@ -25,6 +25,7 @@ let postScss = [
 	require('postcss-vmax'),
 	require('postcss-short'),
 	require('postcss-center'),
+	require('postcss-grid-kiss')(pc.gridKiss),
 	require('rucksack-css')(pc.rucksack),
 	require('postcss-flexbox'),
 	require('postcss-assets')(assetConf),
@@ -65,10 +66,10 @@ function css() {
 		.pipe(mode.minimize ? postcss([cssnano(pc.cssnano)]) : postcss([autoprefixer(pc.cssnano.autoprefixer)]))
 		.pipe(mode.beautify ? beautify(config.tasks.css.cssbeautifyOptions) : util.noop())
 		.pipe(config.root.inlineAssets ? gulp.dest(path.join(config.root.base, config.root.inlineAssets)) : util.noop())
-		.pipe(header(config.banner, {
+		.pipe(config.banner ? header(config.banner, {
 			info: config.info,
 			timestamp: getTimestamp()
-		}))
+		}) : util.noop())
 		.pipe(chmod(config.chmod))
 		.pipe(mode.maps ? sourcemaps.write() : util.noop())
 		.pipe(gulp.dest(paths.dest))
