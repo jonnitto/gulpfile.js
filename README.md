@@ -5,7 +5,7 @@ gulpfile.js is a delicious blend of tasks and build tools poured into [Gulp](htt
 
 ## Usage
 
-Make sure Node installed. We recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
+Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
 
 ### Install Dependencies
 
