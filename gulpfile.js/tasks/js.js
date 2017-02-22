@@ -32,8 +32,8 @@ if (rollupConfig) {
 
 let rollupPlugins = [
 	includePaths(rollupConfig.plugins.includePaths),
-	nodeResolve(rollupConfig.plugins.nodeResolve),
-	bowerResolve(rollupConfig.plugins.bowerResolve)
+	bowerResolve(rollupConfig.plugins.bowerResolve),
+	nodeResolve(rollupConfig.plugins.nodeResolve)
 ];
 if (rollupConfig.plugins.commonjs) { rollupPlugins.push(commonjs(rollupConfig.plugins.commonjs)); }
 if (rollupConfig.plugins.amd) { rollupPlugins.push(amd(rollupConfig.plugins.amd)); }
@@ -60,10 +60,10 @@ function js() {
 			format: rollupConfig.format
 		}))
 		.pipe(config.root.inlineAssets ? gulp.dest(path.join(config.root.base, config.root.inlineAssets)) : util.noop())
-		.pipe(header(config.banner, {
+		.pipe(config.banner ? header(config.banner, {
 			info: config.info,
 			timestamp: getTimestamp()
-		}))
+		}) : util.noop())
 		.pipe(mode.maps ? sourcemaps.write() : util.noop())
 		.pipe(gulp.dest(paths.dest))
 		.pipe(size({
