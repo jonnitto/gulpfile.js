@@ -11,6 +11,8 @@ func.globalImport('fs');
 func.globalImport('textTable', 'text-table');
 func.globalImport('through2');
 
+global.browserSync = null;
+
 global.flags = {
 	'--b, --beautify': ' Beautify and dont\'t compress files',
 	'--d, --debug':    ' Files dont\'t get compressed and sourcemaps get genereated',

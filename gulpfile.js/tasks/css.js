@@ -73,11 +73,11 @@ function css() {
 		.pipe(chmod(config.chmod))
 		.pipe(mode.maps ? sourcemaps.write() : util.noop())
 		.pipe(gulp.dest(paths.dest))
+		.pipe(browserSync ? browserSync.stream() : util.noop())
 		.pipe(size({
 			title: 'CSS:',
 			showFiles: true
-		})
-	);
+		}));
 }
 
 module.exports = css;

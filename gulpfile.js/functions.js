@@ -114,6 +114,12 @@ function mergeConfigAndLoadTasks() {
 	getInfoFromComposer();
 	mergeRootConfig('gulp.json');
 	mergeSiteConfig('Packages/Sites');
+
+	if (config.browserSync.enable) {
+		delete config.browserSync.enable;
+		browserSync = require('browser-sync').create();
+	}
+
 	loadTasks();
 }
 

@@ -17,6 +17,13 @@
         "notifications": false
     },
 
+    "browserSync": {
+        "enable": false,
+        "proxy": "127.0.0.1:8081",
+        "open": true,
+        "xip": false
+    },
+
     "banner": "/*!\n * <%= info.description %> - powered by <%= info.system %> & <%= info.author %>\n * @build <%= timestamp %>\n * @link <%= info.homepage %>\n */\n",
 
     "chmod": {

@@ -99,6 +99,11 @@ gulp.task('build').flags = flags;
 // Watch
 task.watch = () => {
 	const TASK = ['css', 'js', 'fonts', 'images', 'static', 'svgSprite'];
+
+	if (browserSync) {
+		browserSync.init(config.browserSync);
+	}
+
 	TASK.forEach((taskName) => {
 		if (config.tasks[taskName]) {
 			let filesToWatch = func.getFilesToWatch(taskName);
