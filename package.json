@@ -18,7 +18,8 @@
     "build": "gulp build",
     "css": "gulp css",
     "scss": "gulp scss",
-    "js": "gulp js"
+    "js": "gulp js",
+    "images": "gulp optimizeImages"
   },
   "dependencies": {},
   "devDependencies": {

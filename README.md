@@ -31,13 +31,17 @@ If you have gulp installed globally, you can simple run `gulp`, optional with so
 If there's a global gulp in a different version, you have to use this commands:
 
 Command             | Watcher | Behaviour
-------------------- | ------- | -------------------------------------------------
+------------------- | ------- | ---------------------------------------------------------
 `yarn start`        |    x    | Generates all Assets, Javascript and CSS files
-`yarn run tasks`    |    x    | Show all available tasks
+`yarn run tasks`    |         | Show all available tasks
 `yarn run beautify` |    x    | Beautify and dont't compress files
 `yarn run debug`    |    x    | Files dont't get compressed and sourcemaps get genereated
 `yarn run maps`     |    x    | Write sourcemaps
 `yarn run build`    |         | Runs the build process for production
+`yarn run css`      |         | Render CSS Files
+`yarn run scss`     |         | Render `_all.scss` and `_allsub.scss` Files
+`yarn run js`       |         | Render Javascript Files
+`yarn run images`   |         | Optimize images and overrite them in the source folder
 
 
 ## Overview
