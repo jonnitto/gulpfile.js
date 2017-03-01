@@ -11,7 +11,7 @@
         "src": "Sites/GesagtGetan.Theme/Resources/Private",
         "dest": "Sites/GesagtGetan.Theme/Resources/Public",
         "watch": ["Plugins/**/Private/**", "Sites/**/Private/**"],
-        "dontWatch": ["**/WebRoot/**", "Plugins/Jonnitto.Plyr/**", "Plugins/Jonnitto.PhotoSwipe/**"],
+        "dontWatch": ["**/Private/Templates/**", "**/WebRoot/**", "Plugins/Jonnitto.Plyr/**", "Plugins/Jonnitto.PhotoSwipe/**"],
         "inlineAssets": false,
         "optimizeImages": false,
         "notifications": false
