@@ -1,6 +1,6 @@
 {
   "name": "gulpfile",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "gulpfile.js is a delicious blend of tasks and build tools poured into Gulp to form a full-featured modern asset pipeline. You can easily be integrated to the development environment and site or app structure.",
   "private": true,
   "browserslist": [
@@ -68,6 +68,7 @@
     "postcss-pxtorem": "^4.0.0",
     "postcss-quantity-queries": "^0.4.0",
     "postcss-reporter": "^3.0.0",
+    "postcss-round-subpixels": "^1.2.0",
     "postcss-rtl": "^0.5.9",
     "postcss-selector-matches": "^2.0.5",
     "postcss-selector-not": "^2.0.0",

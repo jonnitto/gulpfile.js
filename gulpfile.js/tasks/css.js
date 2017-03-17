@@ -22,13 +22,13 @@ if (Array.isArray(assetConf.loadPaths)) {
 assetConf.relative = path.join(config.root.base, config.root.dest, config.tasks.css.dest);
 
 let postScss = [
+	require('postcss-assets')(assetConf),
 	require('postcss-vmax'),
 	require('postcss-short'),
 	require('postcss-center'),
 	require('postcss-grid-kiss')(pc.gridKiss),
 	require('rucksack-css')(pc.rucksack),
 	require('postcss-flexbox'),
-	require('postcss-assets')(assetConf),
 	require('pleeease-filters'),
 	require('postcss-selector-matches'),
 	require('postcss-selector-not'),
@@ -36,6 +36,7 @@ let postScss = [
 	require('postcss-quantity-queries'),
 	require('postcss-fixes')(pc.fixes),
 	require('css-mqpacker')(pc.mqpacker),
+	require('postcss-round-subpixels'),
 	require('postcss-reporter')
 ];
 

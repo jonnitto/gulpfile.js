@@ -96,6 +96,7 @@ Plugin                                                                          
 **[postcss-pseudoelements](https://www.npmjs.com/package/postcss-pseudoelements)**      | PostCSS plugin to add single-colon CSS 2.1 syntax pseudo selectors (i.e. :before)
 **[postcss-quantity-queries](https://www.npmjs.com/package/postcss-quantity-queries)**  | PostCSS plugin enabling quantity-queries
 **[postcss-reporter](https://www.npmjs.com/package/postcss-reporter)**                  | Log PostCSS messages in the console
+**[postcss-round-subpixels](https://www.npmjs.com/package/postcss-round-subpixels)**    | Plugin that rounds sub-pixel (eg: 12.87378px) values to the nearest full pixel.
 **[postcss-rtl](https://www.npmjs.com/package/postcss-rtl)**                            | PostCSS plugin for RTL-optimizations. Turned off by default
 **[postcss-selector-matches](https://www.npmjs.com/package/postcss-selector-matches)**  | PostCSS plugin to transform :matches() W3C CSS pseudo class to more compatible CSS selectors
 **[postcss-selector-not](https://www.npmjs.com/package/postcss-selector-not)**          | PostCSS plugin to transform :not() W3C CSS leve 4 pseudo class to :not() CSS level 3 selectors
