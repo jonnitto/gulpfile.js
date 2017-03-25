@@ -32,7 +32,7 @@ let postScss = [
 	require('pleeease-filters'),
 	require('postcss-selector-matches'),
 	require('postcss-selector-not'),
-	require('postcss-pseudoelements'),
+	require('postcss-pseudoelements')(pc.pseudoelements),
 	require('postcss-quantity-queries'),
 	require('postcss-fixes')(pc.fixes),
 	require('css-mqpacker')(pc.mqpacker),

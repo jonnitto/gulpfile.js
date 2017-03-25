@@ -70,6 +70,10 @@
                     "fallback": true,
                     "optimize": true
                 },
+                "pseudoelements": {
+                    "single": true,
+                    "selectors": ["before","after","first-letter","first-line"]
+                },
                 "rucksack": {
                     "fallbacks": false
                 },
@@ -97,6 +101,12 @@
                 },
                 "fixes": {
                     "preset": "safe"
+                },
+                "imagemin": {
+                    "gifsicle": {},
+                    "jpegtran": {},
+                    "optipng": {},
+                    "svgo": {}
                 }
             },
             "cssbeautifyOptions": {

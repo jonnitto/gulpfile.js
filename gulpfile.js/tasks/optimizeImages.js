@@ -3,15 +3,16 @@ let paths = {
 	src: path.join(config.root.base, config.root.src, config.tasks.images.src, '/**', getExtensions(config.tasks.images.extensions)),
 	dest: path.join(config.root.base, config.root.src, config.tasks.images.src)
 };
+let conf = config.tasks.css.postcss.imagemin;
 
 function optimizeImages() {
 	return gulp.src(paths.src)
 		.pipe(plumber(handleErrors))
 		.pipe(imagemin([
-			imagemin.gifsicle(),
-			imagemin.jpegtran(),
-			imagemin.optipng(),
-			imagemin.svgo()
+			imagemin.gifsicle(conf.gifsicle),
+			imagemin.jpegtran(conf.jpegtran),
+			imagemin.optipng(conf.optipng),
+			imagemin.svgo(conf.svgo)
 		],{
 			verbose: true
 		}))
