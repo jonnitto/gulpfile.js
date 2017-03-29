@@ -23,6 +23,13 @@
     estraverse "^4.2.0"
     js-beautify "^1.6.4"
 
+"@gulp-sourcemaps/map-sources@1.X":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/map-sources/-/map-sources-1.0.0.tgz#890ae7c5d8c877f6d384860215ace9d7ec945bda"
+  dependencies:
+    normalize-path "^2.0.1"
+    through2 "^2.0.3"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -2866,10 +2873,11 @@ gulp-sourcemaps@1.6.0:
     through2 "^2.0.0"
     vinyl "^1.0.0"
 
-gulp-sourcemaps@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-2.4.1.tgz#8f65dc5c0d07b2fd5c88bc60ec7f13e56716bf74"
+gulp-sourcemaps@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-2.5.0.tgz#8270a25148357ac73597bd0c6bd43177e982a3af"
   dependencies:
+    "@gulp-sourcemaps/map-sources" "1.X"
     acorn "4.X"
     convert-source-map "1.X"
     css "2.X"
@@ -4717,6 +4725,19 @@ postcss-alias@^1.0.0:
   dependencies:
     postcss "^5.0.0"
 
+postcss-animation.css-data@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-animation.css-data/-/postcss-animation.css-data-0.0.5.tgz#94eb940ee9b5b6d0be1873e7ddc54397ebea3352"
+
+postcss-animations@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-animations/-/postcss-animations-0.0.6.tgz#b32c796fcb719deb852d93f32fb2c4bcc3553b79"
+  dependencies:
+    postcss "^5.2.16"
+    postcss-animation.css-data "^0.0.5"
+    postcss-magic.css-data "^0.0.5"
+    postcss-tuesday.css-data "^0.0.5"
+
 postcss-assets@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-assets/-/postcss-assets-4.1.0.tgz#341f30d6ac0fbb314d82a28cc1ea753a986ffed7"
@@ -4863,9 +4884,9 @@ postcss-functions@^2.1.0:
     postcss "^5.0.10"
     postcss-value-parser "^3.1.3"
 
-postcss-grid-kiss@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-grid-kiss/-/postcss-grid-kiss-1.1.1.tgz#94a861bd5183e14ae99e4d6a4a42c0ddcc1523fd"
+postcss-grid-kiss@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/postcss-grid-kiss/-/postcss-grid-kiss-1.2.0.tgz#05820592375c536c828d08b270b511abd4739976"
   dependencies:
     browserslist "^1.7.4"
     caniuse-api "^1.5.3"
@@ -4908,6 +4929,21 @@ postcss-load-plugins@^2.3.0:
   dependencies:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
+
+postcss-magic-animations-data@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/postcss-magic-animations-data/-/postcss-magic-animations-data-1.2.1.tgz#ca79c6a05114ca586267e94312cb0c8af4ebb12b"
+
+postcss-magic-animations@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-magic-animations/-/postcss-magic-animations-0.3.0.tgz#3a644f791d2bb9583d2ff193943dada46b5c127b"
+  dependencies:
+    postcss "^5.0.16"
+    postcss-magic-animations-data "^1.2.1"
+
+postcss-magic.css-data@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-magic.css-data/-/postcss-magic.css-data-0.0.5.tgz#b55d454d0d812aae83ca1fe68c832c5d4be6d8a4"
 
 postcss-merge-grid-template@^0.5.3:
   version "0.5.3"
@@ -5210,6 +5246,10 @@ postcss-svgo@^2.1.1:
     postcss "^5.0.14"
     postcss-value-parser "^3.2.3"
     svgo "^0.7.0"
+
+postcss-tuesday.css-data@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-tuesday.css-data/-/postcss-tuesday.css-data-0.0.5.tgz#86a82439c16b4ad11384976c5021933a870e9ebb"
 
 postcss-unique-selectors@^2.0.2:
   version "2.0.2"

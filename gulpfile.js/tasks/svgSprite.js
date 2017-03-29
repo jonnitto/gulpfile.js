@@ -12,6 +12,9 @@ let paths = {
 function svgSprite() {
 	return gulp.src(paths.src, {since: cache.lastMtime('svgSprite')})
 		.pipe(plumber(handleErrors))
+		.pipe(rename(path => {
+			path.basename = 'icon-' + path.basename.toLowerCase();
+		}))
 		.pipe(cache('svgSprite'))
 		.pipe(imagemin())
 		.pipe(svgstore())

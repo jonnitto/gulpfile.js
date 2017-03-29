@@ -23,6 +23,7 @@ assetConf.relative = path.join(config.root.base, config.root.dest, config.tasks.
 
 let postScss = [
 	require('postcss-assets')(assetConf),
+	require('postcss-magic-animations')(pc.magicAnimations),
 	require('postcss-vmax'),
 	require('postcss-short'),
 	require('postcss-center'),

@@ -66,6 +66,7 @@
                     "loadPaths": ["Assets"],
                     "cachebuster": false
                 },
+                "magicAnimations": {},
                 "gridKiss": {
                     "fallback": true,
                     "optimize": true
