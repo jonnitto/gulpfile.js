@@ -119,3 +119,9 @@ Package | Command
 * [ScssLint](https://plugins.jetbrains.com/plugin/7530)
 * [ESLint](https://plugins.jetbrains.com/plugin/7494)
 * [TypoScript 2](https://plugins.jetbrains.com/plugin/7463)
+
+
+License
+-------
+
+Licensed under MIT, see [LICENSE](LICENSE)
