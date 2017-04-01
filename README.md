@@ -112,13 +112,13 @@ Package | Command
 ------- | -------
 [ScssLint](https://atom.io/packages/linter-scss-lint) | `apm install linter-scss-lint`
 [ESLint](https://atom.io/packages/linter-eslint) | `apm install linter-eslint`
-[TypoScript 2](https://atom.io/packages/language-typoscript2) | `apm installlanguage-typoscript2`
+[Fusion](https://atom.io/packages/language-typoscript2) | `apm install language-typoscript2`
 
 ### [PhpStorm](https://www.jetbrains.com/phpstorm/) and [WebStorm](https://www.jetbrains.com/webstorm/)
 
 * [ScssLint](https://plugins.jetbrains.com/plugin/7530)
 * [ESLint](https://plugins.jetbrains.com/plugin/7494)
-* [TypoScript 2](https://plugins.jetbrains.com/plugin/7463)
+* [Neos](https://www.neos.io/blog/the-neos-intellij-plugin.html)
 
 
 License
