@@ -85,7 +85,7 @@ Following plugins are included:
 
 Plugin                                                                                  | Description
 --------------------------------------------------------------------------------------- | ----------------------
-**[postcss-rtl](https://www.npmjs.com/package/postcss-rtl)**                            | PostCSS plugin for RTL-optimizations. Turned off by default
+**[postcss-rtl](https://www.npmjs.com/package/postcss-rtl)**                            | PostCSS plugin for RTL-optimizations. **Turned off by default**
 **[postcss-assets](https://www.npmjs.com/package/postcss-assets)**                      | PostCSS plugin to manage assets
 **[postcss-magic-animations](https://www.npmjs.com/package/postcss-magic-animations)**  | Plugin that adds `@keyframes` from [Magic Animations](https://github.com/miniMAC/magic)
 **[postcss-vmax](https://www.npmjs.com/package/postcss-vmax)**                          | Use vmax units in Edge and Internet Explorer
