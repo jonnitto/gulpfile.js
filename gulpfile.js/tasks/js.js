@@ -37,6 +37,7 @@ let rollupPlugins = [
 ];
 if (rollupConfig.plugins.commonjs) { rollupPlugins.push(commonjs(rollupConfig.plugins.commonjs)); }
 if (rollupConfig.plugins.amd) { rollupPlugins.push(amd(rollupConfig.plugins.amd)); }
+
 rollupPlugins.push(rollupSourcemaps());
 rollupPlugins.push(globals());
 if (rollupConfig.buble) { rollupPlugins.push(buble()); }
