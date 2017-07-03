@@ -11,9 +11,8 @@
         "src": "Sites/GesagtGetan.Theme/Resources/Private",
         "dest": "Sites/GesagtGetan.Theme/Resources/Public",
         "watch": ["Plugins/**/Private/**", "Sites/**/Private/**"],
-        "dontWatch": ["**/Private/Templates/**", "**/WebRoot/**", "Plugins/Jonnitto.Plyr/**", "Plugins/Jonnitto.PhotoSwipe/**"],
+        "dontWatch": ["**/Private/Templates/**", "**/WebRoot/**", "Plugins/Jonnitto.Plyr/**", "Plugins/Jonnitto.PhotoSwipe/**","Plugins/Sitegeist.Monocle/**"],
         "inlineAssets": false,
-        "optimizeImages": false,
         "notifications": false
     },
 
@@ -55,6 +54,7 @@
                 "precision": 10,
                 "sourceComments": true,
                 "includePaths": [
+                    "./Packages/Sites/",
                     "./Packages/Plugins/",
                     "./bower_components/",
                     "./node_modules/"
@@ -174,6 +174,9 @@
             "src": "Sprite",
             "dest": "Assets",
             "watchOnlySrc": true,
+            "svgo": {
+
+            },
             "extensions": ["svg"]
         }
     }
