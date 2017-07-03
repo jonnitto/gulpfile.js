@@ -50,11 +50,11 @@ function getTimestamp() {
 	return timestamp;
 }
 
-function getExtensions(extensions) {
+function getExtensions(extensions, prepend = '') {
 	if (Array.isArray(extensions)) {
-		return '/*.' + (extensions.length > 1 ? '{' + extensions.join(',') + '}' : extensions);
+		return '/' + prepend + '*.' + (extensions.length > 1 ? '{' + extensions.join(',') + '}' : extensions);
 	} else {
-		return '/*.' + extensions;
+		return '/' + prepend + '*.' + extensions;
 	}
 }
 
@@ -62,7 +62,6 @@ function getInfoFromComposer(path = '') {
 	try {
 		let composer = require(`../${path}composer.json`);
 		let author   = composer.author ? composer.author : config.info.author;
-
 		if (composer.description && composer.homepage) {
 			config.info = {
 				description: composer.description,
@@ -93,13 +92,17 @@ function getFolderSiteName(files) {
 }
 
 function mergeSiteConfig(path) {
+	const files = fs.readdirSync(path);
+	const siteFolder = getFolderSiteName(files);
+
 	try {
-		const files = fs.readdirSync(path);
-		const siteFolder = getFolderSiteName(files);
 		const packageConfig = require(`../${path}/${siteFolder}/Configuration/Gulp.json`);
-		getInfoFromComposer(`${path}/${siteFolder}/`);
 		mergeDeep(config, packageConfig);
 		console.info(`Loaded config file ${util.colors.red('Gulp.json')} from the package ${util.colors.red(siteFolder)}`);
+	} catch (error) {
+	}
+	try {
+		getInfoFromComposer(`${path}/${siteFolder}/`);
 	} catch (error) {
 	}
 }
@@ -113,7 +116,10 @@ function mergeConfigAndLoadTasks() {
 	importLibs();
 	getInfoFromComposer();
 	mergeRootConfig('gulp.json');
-	mergeSiteConfig('Packages/Sites');
+	try {
+		mergeSiteConfig('Packages/Sites');
+	} catch (error) {
+	}
 
 	if (config.browserSync.enable) {
 		delete config.browserSync.enable;
