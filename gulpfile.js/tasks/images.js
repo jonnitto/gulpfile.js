@@ -14,7 +14,6 @@ function images() {
 		.pipe(plumber(handleErrors))
 		.pipe(cache('images'))
 		.pipe(changed(paths.dest)) // Ignore unchanged files
-		.pipe(config.root.optimizeImages ? imagemin() : util.noop())  // Optimize
 		.pipe(flatten())
 		.pipe(chmod(config.chmod))
 		.pipe(gulp.dest(paths.dest))
