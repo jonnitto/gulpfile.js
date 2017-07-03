@@ -2,6 +2,7 @@
 !browser-sync-ui/lib/plugins/history
 !svgo/.svgo.yml
 !postcss-assets
+!assets
 
 # test directories
 __tests__
