@@ -16,7 +16,7 @@ function svgSprite() {
 			path.basename = 'icon-' + path.basename.toLowerCase();
 		}))
 		.pipe(cache('svgSprite'))
-		.pipe(imagemin())
+		.pipe(imagemin([imagemin.svgo({plugins:[config.tasks.svgSprite.svgo]})]))
 		.pipe(svgstore())
 		.pipe(gulp.dest(paths.dest))
 		.pipe(size({
