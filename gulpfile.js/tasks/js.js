@@ -35,8 +35,21 @@ let rollupPlugins = [
 	bowerResolve(rollupConfig.plugins.bowerResolve),
 	nodeResolve(rollupConfig.plugins.nodeResolve)
 ];
-if (rollupConfig.plugins.commonjs) { rollupPlugins.push(commonjs(rollupConfig.plugins.commonjs)); }
-if (rollupConfig.plugins.amd) { rollupPlugins.push(amd(rollupConfig.plugins.amd)); }
+if (rollupConfig.plugins.commonjs) {
+	if (typeof rollupConfig.plugins.commonjs == 'boolean') {
+		rollupPlugins.push(commonjs());
+	} else {
+		rollupPlugins.push(commonjs(rollupConfig.plugins.commonjs));
+	}
+}
+
+if (rollupConfig.plugins.amd) {
+	if (typeof rollupConfig.plugins.amd == 'boolean') {
+		rollupPlugins.push(amd());
+	} else {
+		rollupPlugins.push(amd(rollupConfig.plugins.amd));
+	}
+}
 
 rollupPlugins.push(rollupSourcemaps());
 rollupPlugins.push(globals());
@@ -67,6 +80,7 @@ function js() {
 		}) : util.noop())
 		.pipe(mode.maps ? sourcemaps.write() : util.noop())
 		.pipe(gulp.dest(paths.dest))
+		.pipe(browserSync ? browserSync.stream() : util.noop())
 		.pipe(size({
 			title: 'JS:',
 			showFiles: true
