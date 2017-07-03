@@ -1,7 +1,7 @@
 'use strict';
 let paths = {
 	src: path.join(config.root.base, config.root.src, config.tasks.images.src, '/**', getExtensions(config.tasks.images.extensions)),
-	dest: path.join(config.root.base, config.root.src, config.tasks.images.src)
+	dest: path.join(config.root.base, config.root.dest, config.tasks.images.dest)
 };
 let conf = config.tasks.css.postcss.imagemin;
 

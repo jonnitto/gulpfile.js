@@ -66,13 +66,13 @@ if (config.tasks.js) {
 	}
 }
 
-if (config.root.optimizeImages) {
-	gulp.task('images', task.images);
-	gulp.task('images').description = 'Copy and optimize images';
-}
-
 gulp.task('optimizeImages', task.optimizeImages);
-gulp.task('optimizeImages').description = 'Optimize images and overrite them in the source folder';
+gulp.task('optimizeImages').description = 'Optimize images and overrite them in the public folder';
+
+if (config.tasks.svgSprite) {
+	gulp.task('sprite', task.svgSprite);
+	gulp.task('sprite').description = 'Create SVG Sprite';
+}
 
 
 // Build Task
@@ -130,3 +130,7 @@ gulp.task('watch').description = 'Watch files and regenereate them'
 gulp.task('default', gulp.series('build', 'watch'));
 gulp.task('default').description = util.colors.inverse(' Generates all ') + ' Assets, Javascript and CSS files & ' + util.colors.inverse(' watch them ');
 gulp.task('default').flags = flags;
+
+
+gulp.task('pipeline', gulp.series('build', 'optimizeImages'))
+gulp.task('pipeline').description = 'Build task for pipeline'
