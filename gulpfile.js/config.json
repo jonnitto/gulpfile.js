@@ -63,7 +63,7 @@
             "postcss": {
                 "activateRtlCss": false,
                 "assets": {
-                    "loadPaths": ["Assets"],
+                    "loadPaths": ["Assets", "../Private/Sprite"],
                     "cachebuster": false
                 },
                 "magicAnimations": {"atRoot": true},
